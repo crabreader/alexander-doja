@@ -7,6 +7,6 @@
     <ul>
         <a href="/"><li>Hem</li></a>
         <a href="/cv"><li>CV</li></a>
-        <a href="/"><li>Portfolio</li></a>
+        <a href="/portfolio"><li>Portfolio</li></a>
     </ul>
 </nav>
