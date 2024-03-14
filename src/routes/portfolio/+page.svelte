@@ -25,7 +25,7 @@
                 }
             };
         }
-    })
+    });
 </script>
 
 <main>
@@ -35,7 +35,7 @@
             <h2>Hämtar projekt...</h2>
         </div>
     {:else if errored}
-        <p>{repos.error.error_text}: {repos.error.error_message}</p>
+        <h3>{repos.error.error_text}: {repos.error.error_message}</h3>
     {:else}
         <div class="portfolio-grid">
             {#each repos as repo}
