@@ -68,19 +68,19 @@ button:hover {
 
 .page-layout {
     display: grid;
-    grid-template-areas: 'navbar main';
-    grid-template-columns: 15vw auto;
+    grid-template-columns: auto 1fr; 
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: '. main'
+                         '. main'
+                         '. footer';
+    min-height: 100vh;
 }
 
 .navbar {
-    grid-area: navbar;
-    height: 100vh;
-    width: 15vw;
     font-size: xx-large;
     border-right: 5px solid var(--fg);
-    overflow: hidden;
-    overflow-wrap: break-word;
-    position: fixed;
+    border-bottom: 5px solid var(--fg);
+    position: sticky;
     top: 0;
 }
 
@@ -105,13 +105,11 @@ button:hover {
 }
 
 .menu-button {
-    display: none;
     position: sticky;
     top: 0;
 }
 
 .menu-close {
-    display: none;
     background-color: var(--fg);
     color: var(--bg);
     border: 2px solid var(--bg);
@@ -124,6 +122,12 @@ button:hover {
 .menu-close:active {
     background-color: var(--bg);
     color: var(--fg);
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    margin: 1em;
 }
 
 .portfolio-grid {
@@ -231,16 +235,20 @@ button:hover {
     .page-layout {
         grid-template-areas: 
                     'navbar'
-                    'main';
+                    'main'
+                    'footer';
         grid-template-columns: auto;
+        grid-template-rows: auto;
     }
 
     .navbar {
         display: none;
-        min-height: 100%;
-        min-width: 100%;
+        height: 100vh;
+        width: 100vw;
         background-color: var(--fg);
         color: var(--bg);
+        position: fixed;
+        overflow: hidden;
     }
 
     .navbar a {
@@ -266,8 +274,6 @@ button:hover {
         background-color: var(--fg);
         color: var(--bg);
         padding: 1em;
-        border: none;
-        border: 5px solid var(--fg);
     }
 
     .menu-button:active {
@@ -279,14 +285,14 @@ button:hover {
         display: block;
     }
 
-    .portfolio-grid {
-        grid-template-columns: auto;
-    }
-
     .loading {
         width: 100%;
         left: 0;
         text-align: center;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 
     .gifs {
