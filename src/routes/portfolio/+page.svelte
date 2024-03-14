@@ -28,24 +28,22 @@
     });
 </script>
 
-<main>
-    <h1>Portfolio</h1>
-    {#if loading}
-        <div class="loading">
-            <h2>Hämtar projekt...</h2>
-        </div>
-    {:else if errored}
-        <h3>{repos.error.error_text}: {repos.error.error_message}</h3>
-    {:else}
-        <div class="portfolio-grid">
-            {#each repos as repo}
-                <div class="portfolio-item">
-                    <h2>{repo.name}</h2>
-                    <hr>
-                    <p>{repo.description}</p>
-                    <a href={repo.html_url}>Github</a>
-                </div>
-            {/each}
-        </div>
-    {/if}
-</main>
+<h1>Portfolio</h1>
+{#if loading}
+    <div class="loading">
+        <h2>Hämtar projekt...</h2>
+    </div>
+{:else if errored}
+    <h3>{repos.error.error_text}: {repos.error.error_message}</h3>
+{:else}
+    <div class="portfolio-grid">
+        {#each repos as repo}
+            <div class="portfolio-item">
+                <h2>{repo.name}</h2>
+                <hr>
+                <p>{repo.description}</p>
+                <a href={repo.html_url}>Github</a>
+            </div>
+        {/each}
+    </div>
+{/if}

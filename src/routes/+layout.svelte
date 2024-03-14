@@ -5,6 +5,8 @@
 
 <div class="page-layout">
     <Navbar />
-    <slot />
+    <main>
+        <slot />
+    </main>
     <Footer />
 </div>
