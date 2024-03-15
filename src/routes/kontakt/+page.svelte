@@ -1,11 +1,36 @@
 <script lang="ts">
     let name: string, email: string, message: string;
 
-    async function handleSubmit() {
+    async function handleSubmit(event: { preventDefault: () => void; }) {
+        event.preventDefault();
 
+        const formData = { name, email, message };
+
+        try {
+            const response = await fetch('http://localhost:3000/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            console.log("Response: " + response);
+
+            if (response.ok) {
+                alert('Meddelandet har skickats!');
+
+                name = "";
+                email = "";
+                message = "";
+            } else {
+                alert('Misslyckades med att skicka meddelande.');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Misslyckades med att skicka meddelande.');
+        }
     }
-
-
 </script>
 
 <h1>Kontakta mig</h1>
@@ -32,7 +57,7 @@
         display:block;
         background-color: #000;
         border: 2px solid #0f0;
-        margin: 5px 0 5px 0;
+        margin: 5px 0 15px 0;
         padding: 5px;
         color: #fff;
         font-size: x-large;
