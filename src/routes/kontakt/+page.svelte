@@ -7,7 +7,7 @@
         const formData = { name, email, message };
 
         try {
-            const response = await fetch('http://localhost:3000/', {
+            const response = await fetch('https://email-server-beta.vercel.app/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
