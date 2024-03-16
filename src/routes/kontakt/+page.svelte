@@ -15,20 +15,19 @@
                 body: JSON.stringify(formData)
             });
 
-            console.log("Response: " + response);
-
             if (response.ok) {
                 alert('Meddelandet har skickats!');
 
                 name = "";
                 email = "";
-                message = "";
+                message = "";   
             } else {
-                alert('Misslyckades med att skicka meddelande.');
+                alert('Meddelandet kunde inte skickas.');
             }
+
         } catch (error) {
             console.error('Error sending email:', error);
-            alert('Misslyckades med att skicka meddelande.');
+            alert('Meddelandet kunde inte skickas.');
         }
     }
 </script>
