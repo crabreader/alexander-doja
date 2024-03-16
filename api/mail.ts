@@ -2,11 +2,11 @@ import nodemailer from 'nodemailer';
 
 export default async function handler(req: any, res: any) {
 
-  const { name, email, message } = req.body;
-
   // Validate data here if needed
 
-  if (req.method === 'POST') {
+  if (req.method === 'POST' && req.body) {
+    const { name, email, message } = req.body;
+
     try {
       //Configure nodemailer to send emails
       const transporter = nodemailer.createTransport({
