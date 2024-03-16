@@ -53,7 +53,7 @@
         margin: 5em;
     }
 
-    input {
+    input, textarea {
         display:block;
         background-color: #000;
         border: 2px solid #0f0;
@@ -62,17 +62,10 @@
         color: #fff;
         font-size: x-large;
         width: 100%;
+        box-sizing: border-box;
     }
 
     textarea {
-        display:block;
-        background-color: #000;
-        border: 2px solid #0f0;
-        margin: 5px 0 5px 0;
-        padding: 5px;
-        color: #fff;
-        font-size: x-large;
-        width: 100%;
         resize: vertical;
     }
 
@@ -80,5 +73,17 @@
         padding: 10px;
         margin-top: 10px;
         font-size: x-large;
+        background-color: #0f0;
+        color: #000;
+    }
+
+    @media only screen and (max-width: 900px) {
+        form {
+            margin: 0.5em;
+        }
+
+        button {
+            width: 100%;
+        }
     }
 </style>

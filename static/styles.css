@@ -108,6 +108,7 @@ button:hover {
 .menu-button {
     position: sticky;
     top: 0;
+    max-height: 120px;
 }
 
 .menu-close {
