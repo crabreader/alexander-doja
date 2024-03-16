@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { toggleMenu } from "../utils";
+    import Menu from 'svelte-feathers/Menu.svelte';
 
     let isPhoneSize = false;
 
@@ -26,7 +27,7 @@
 
 {#if isPhoneSize}
     <button class="menu-button" on:click={toggleMenu}>
-        Meny
+        <Menu size="26"/>
     </button>    
 {/if}
 

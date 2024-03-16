@@ -44,36 +44,14 @@
     <label for="message">Meddelande:</label>
     <textarea id="message" bind:value={message} rows="3" required></textarea>
 
-    <button type="submit">Skicka</button>
+    <button class="button" type="submit">Skicka</button>
 </form>
 
 <style>
-    form {
-        margin: 5em;
-    }
-
-    input, textarea {
-        display:block;
-        background-color: #000;
-        border: 2px solid #0f0;
-        margin: 5px 0 15px 0;
-        padding: 5px;
-        color: #fff;
-        font-size: x-large;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    textarea {
-        resize: vertical;
-    }
-
     button {
         padding: 10px;
         margin-top: 10px;
         font-size: x-large;
-        background-color: #0f0;
-        color: #000;
     }
 
     @media only screen and (max-width: 900px) {

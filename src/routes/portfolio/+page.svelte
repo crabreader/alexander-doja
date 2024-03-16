@@ -1,6 +1,8 @@
 <script lang="ts">
     import axios from "axios";
-    import { onMount } from "svelte";
+    import { onMount } from "svelte";    
+    import Github from 'svelte-feathers/Github.svelte';
+    import ExternalLink from 'svelte-feathers/ExternalLink.svelte'
 
     let loading: boolean = true;
     let errored: boolean = false;
@@ -39,10 +41,10 @@
     <div class="portfolio-grid">
         {#each repos as repo}
             <div class="portfolio-item">
-                <h2>{repo.name}</h2>
+                <h2><Github /> {repo.name}</h2>
                 <hr>
                 <p>{repo.description}</p>
-                <a href={repo.html_url}>Github</a>
+                <a href={repo.html_url} target="_blank">Github<ExternalLink size="15" /></a>
             </div>
         {/each}
     </div>
