@@ -95,14 +95,6 @@ export const cv: CVType = {
             location : "Distans",
             description : "Grundläggande utbildning i det Japanska språket. Färdigheter inom läsning, skrivning och hörförståelse."
         },
-/*         {
-            name : "Kandidatprogram i Datavetenskap",
-            yearStart : 2022,
-            yearEnd : 2023,
-            schoolName : "Umeå Universitet",
-            location : "Umeå",
-            description : "Som en del av utbildningen ingår kurser i programmering, datavetenskapliga principer, algebra och diskret matematik och även användarinteraktion/design"
-        }, */
         {
             name : "Imperativ programmering (C)",
             yearStart : 2022,
