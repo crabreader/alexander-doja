@@ -25,15 +25,23 @@ interface CVType {
 export const cv: CVType = {
     workExperience : [
         {
-            roleName : "Medlemsrådgivare",
-            yearStart : 2023,
-            companyName : "Sportsgym",
+            roleName : "Receptionist",
+            yearStart : 2024,
+            companyName : "Nordic Wellness",
             location : "Örnsköldsvik",
             experiences : [
                 "Sälja gymkort",
-                "Hantera personuppgifter",
-                "Kundkontakt och hantering av kritisk information"
+                "Lokalvård",
+                "Kundkontakt och hantering av personuppgifter"
             ]
+        },
+        {
+            roleName : "Receptionist",
+            yearStart : 2023,
+            yearEnd : 2024,
+            companyName : "Sportsgym24h",
+            location : "Örnsköldsvik",
+            experiences : []
         },
         {
             roleName : "Fruktpackare",
@@ -70,7 +78,7 @@ export const cv: CVType = {
                 "Färdigheter i organisering och översikt"
             ]
         }
-        ],
+    ],
     education : [
         {
             name : "Systemutvecklare .NET med AI kompetens",
@@ -87,13 +95,21 @@ export const cv: CVType = {
             location : "Distans",
             description : "Grundläggande utbildning i det Japanska språket. Färdigheter inom läsning, skrivning och hörförståelse."
         },
-        {
+/*         {
             name : "Kandidatprogram i Datavetenskap",
             yearStart : 2022,
             yearEnd : 2023,
             schoolName : "Umeå Universitet",
             location : "Umeå",
             description : "Som en del av utbildningen ingår kurser i programmering, datavetenskapliga principer, algebra och diskret matematik och även användarinteraktion/design"
+        }, */
+        {
+            name : "Imperativ programmering (C)",
+            yearStart : 2022,
+            yearEnd : 2022,
+            schoolName : "Umeå Universitet",
+            location : "Umeå",
+            description : "Grundläggande färdigheter i programspråket C."
         },
         {
             name : "Teknikprogrammet - Informations & mediateknik",
@@ -101,7 +117,7 @@ export const cv: CVType = {
             yearEnd : 2021,
             schoolName : "Parkskolan",
             location : "Örnsköldsvik",
-            description : "Gymnasial utbildning i svenska, engelska, matematik och fysik m.m. Inriktningen innehöll undervisning i datorkunskap, webbutveckling, programmering och mycket annat."
+            description : "Gymnasial utbildning med tekniskt fokus. Inriktningen innehöll undervisning i datorkunskap, webbutveckling, programmering och mycket annat."
         }
     ]
 };
